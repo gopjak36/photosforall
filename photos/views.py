@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.utils import timezone
+from .models import Photo
 
 def photos_list(request):
-    return render(request, 'photos/photos_list.html', {})
+    photos = Photo.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'photos/photos_list.html', {'photos':photos})
