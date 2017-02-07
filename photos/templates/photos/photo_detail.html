@@ -1,0 +1,10 @@
+{% extends 'photos/base.html' %}
+
+
+{% block content %}
+  <div>
+    <img src='{{photo.link}}' style="width: 300px; height: 250px">
+    <a>{{photo.title}}</a>
+    <a>{{photo.published_date}}</a>
+  </div>
+{% endblock %}

@@ -1,23 +1,11 @@
-{% load staticfiles %}
+{% extends 'photos/base.html' %}
 
-<html>
+{% block content %}
+  {% for photo in photos %}
+    <img  src="{{photo.link}}" style="width: 300px; height: 250px">
 
-  <head>
-    <title>PhotosForAll</title>
-    <link rel="stylesheet" href="{% static 'css/site.css' %}">
-  </head>
+    <a href="{% url 'photo_detail' pk=photo.pk %}">{{photo.title}}</a>
+    <a>{{photo.published_date}}</a>
 
-  <body>
-    <div>
-      <h1>PhotosForAll</h1>
-    </div>
-    <div>
-      {% for photo in photos %}
-        <img src="{{photo.link}}" style="width: 300px; height: 250px">
-        <p>{{photo.title}}</p>
-        <p>{{photo.published_date}}</p>
-      {% endfor %}
-    </div>
-  </body>
-
-</html>
+  {% endfor %}
+{% endblock %}
