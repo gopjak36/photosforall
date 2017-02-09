@@ -10,7 +10,11 @@
   <body>
     <div>
       <h1> <a href="/">PhotosForAll</a></h1>
+      <a href="{% url 'photo_new' %}">Add your photo <strong>+</strong></a>
     </div>
+
+    </br>
+
     <div>
       {% block content %}
       {% endblock %}
