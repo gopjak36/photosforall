@@ -2,23 +2,57 @@
 
 <html>
 
-  <head>
+  <head class="header">
     <title>PhotosForAll</title>
     <link rel="stylesheet" href="{% static 'css/site.css' %}">
+
+    <!--Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Barrio">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Autiowide">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bree+Serif">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Caveat+Brush">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pattua+One">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Francois+One">
+
   </head>
 
   <body>
-    <div>
-      <h1> <a href="/">PhotosForAll</a></h1>
-      <a href="{% url 'photo_new' %}">Add your photo <strong>+</strong></a>
-    </div>
 
-    </br>
+    <!--
+        ==========
+          HEADER
+        ==========
+    -->
 
-    <div>
-      {% block content %}
-      {% endblock %}
-    </div>
+    <header>
+      <h1 class="head"> <a href="/">PhotosForAll</a></h1>
+      <h3 class="photo-add"><a href="{% url 'photo_new' %}">&#43; Photo  </a></h3>
+    </header>
+
+    <!--
+        ===========
+          CONTENT
+        ===========
+    -->
+    <div class="background-color">
+    <section class="content">
+      <div class="image-list">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </section>
+  </div>
+    <!--
+        ==========
+          FOOTER
+        ==========
+    -->
+
+    <footer>
+      <large><a href="https://github.com/gopjak36/photosforall" target="_blank">&copy; PhotoForAll 2017 </a> </large>
+    </footer>
+
   </body>
 
 </html>

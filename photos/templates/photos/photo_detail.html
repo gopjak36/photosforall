@@ -2,9 +2,21 @@
 
 
 {% block content %}
-  <div>
-    <img src='{{photo.link}}' style="width: 750px; height: 600px">
-    <p><strong><em>{{photo.title}}</em></strong></p>
-    <p><em>{{photo.published_date}}</em></p>
+  <div class="detail">
+    <img src='{{photo.link}}' class="detail-img">
+    <h3 class="detail-title">{{photo.title}}</h3>
+    <h4 class="detail-time">{{photo.published_date}}</h4>
+    <div id="disqus_thread"></div>
+      <script>
+          (function() {  // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+
+              s.src = '//photosforall.disqus.com/embed.js';
+
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
 {% endblock %}
