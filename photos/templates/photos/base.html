@@ -5,15 +5,13 @@
   <head class="header">
     <title>PhotosForAll</title>
     <link rel="stylesheet" href="{% static 'css/site.css' %}">
+    <link rel="shortcut icon" href="https://maxcdn.icons8.com/Share/icon/Food//cupcake1600.png" type="image/png">
 
     <!--Fonts -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Barrio">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Autiowide">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bree+Serif">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Caveat+Brush">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pattua+One">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Francois+One">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase" rel="stylesheet">
 
   </head>
 
@@ -25,33 +23,31 @@
         ==========
     -->
 
-    <header>
-      <h1 class="head"> <a href="/">PhotosForAll</a></h1>
-      <h3 class="photo-add"><a href="{% url 'photo_new' %}">&#43; Photo  </a></h3>
-    </header>
+    <div class="header">
+      <h1> <a class="name" href="/">PhotosForAll</a><a href="{% url 'photo_new' %}" class="btn">Photo +</a></h1>
+    </div>
 
     <!--
         ===========
           CONTENT
         ===========
     -->
-    <div class="background-color">
-    <section class="content">
-      <div class="image-list">
+    <div class="content container">
         {% block content %}
         {% endblock %}
-      </div>
-    </section>
-  </div>
+    </div>
     <!--
         ==========
           FOOTER
         ==========
     -->
 
-    <footer>
-      <large><a href="https://github.com/gopjak36/photosforall" target="_blank">&copy; PhotoForAll 2017 </a> </large>
-    </footer>
+    <div class="footer">
+      <center>
+        <h4><a class="git" href="https://github.com/gopjak36/photosforall" target="_blank">GitHub</a></h4>
+        <h3><a class="copy" href="/">&copy; PhotosForAll 2017</a></h3>
+      </center>
+    </div>
 
   </body>
 

@@ -1,11 +1,11 @@
 {% extends 'photos/base.html' %}
 
   {% block content %}
-    <div class="new_photo">
-      <h3 class="new_photo-title">New Photo</h3>
-      <form method="POST">{% csrf_token %}
+    <div class="edit">
+      <h3 class="new">New Photo</h3>
+      <form class="form" method="POST" >{% csrf_token %}
         {{ form.as_p}}
-        <button type="submit" class="btn">Publish</button>
+        <center><button class="btn_edit" type="submit">Publish</button></center>
       </form>
-  </div>
+    </div>
   {% endblock %}

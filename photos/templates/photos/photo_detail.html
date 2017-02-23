@@ -3,10 +3,12 @@
 
 {% block content %}
   <div class="detail">
-    <img src='{{photo.link}}' class="detail-img">
-    <h3 class="detail-title">{{photo.title}}</h3>
-    <h4 class="detail-time">{{photo.published_date}}</h4>
+    <img class="img_detail" src='{{photo.link}}'>
+    <h4 class="title">{{photo.title}}</h4>
+    <h5 class="date">{{photo.published_date}}</h5>
+
     <div id="disqus_thread"></div>
+    
       <script>
           (function() {  // DON'T EDIT BELOW THIS LINE
               var d = document, s = d.createElement('script');
@@ -19,4 +21,7 @@
       </script>
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
+
+
+
 {% endblock %}

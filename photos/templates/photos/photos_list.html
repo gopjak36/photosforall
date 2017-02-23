@@ -3,9 +3,7 @@
 {% block content %}
   {% for photo in photos %}
 
-  <section class="image">
-    <a href="{% url 'photo_detail' pk=photo.pk %}"><img  src="{{photo.link}}" class="img-list"></a>
-  </section>
+    <a href="{% url 'photo_detail' pk=photo.pk %}"><img  src="{{photo.link}}"></a>
 
   {% endfor %}
 {% endblock %}
